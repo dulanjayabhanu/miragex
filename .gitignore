@@ -1,0 +1,74 @@
+### MirageX — .gitignore ###
+
+### Build output ###
+target/
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+### Maven ###
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+
+
+### MirageX specific ###
+
+### Encrypted files — never commit sensitive data ###
+*.mgx
+### Test plain text files ###
+secrets.txt
+*.test.txt
+
+
+### OS ###
+
+### Mac ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Windows ###
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Linux ###
+*~
+.fuse_hidden*
+.Trash-*
+
+### Environment Variables ###
+.env
+.env.*
+!.env.example
+
+### Logs ###
+*.log
+logs/

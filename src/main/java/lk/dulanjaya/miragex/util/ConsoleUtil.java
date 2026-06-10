@@ -47,4 +47,10 @@ public class ConsoleUtil {
         System.out.print(ANSI_YELLOW + prompt + ANSI_RESET);
         return new java.util.Scanner(System.in).nextLine();
     }
+
+    // prompt the user for enter the non password inputs
+    public static String promptInput(String prompt) {
+        System.out.print(ANSI_YELLOW + prompt + ANSI_RESET);
+        return new java.util.Scanner(System.in).nextLine();
+    }
 }

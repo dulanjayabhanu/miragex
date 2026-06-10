@@ -17,9 +17,11 @@ import java.util.concurrent.Callable;
 public class UnlockCommand implements Callable<Integer> {
     @Parameters(index = "0", description = "Target file name (<file-name>.mgx)")
     private String fileName;
+
     @Parameters(index = "1", description = "Decryption password", defaultValue = "")
     private String password;
-    @Parameters(index = "2", description = "Step count used during encryption", defaultValue = "3")
+
+    @Parameters(index = "2", description = "Step count used during encryption", defaultValue = "0")
     private int stepCount;
 
     @Override
@@ -27,6 +29,11 @@ public class UnlockCommand implements Callable<Integer> {
         try {
             if (password == null || password.isBlank())
                 password = ConsoleUtil.promptPassword("Enter password: ");
+
+            if (stepCount < 1) {
+                String input = ConsoleUtil.promptInput("Enter step count: ");
+                stepCount = Integer.parseInt(input.trim());
+            }
 
             Path inputPath = Paths.get(System.getProperty("user.dir"), fileName);
             FileUtil.validateExists(inputPath);

@@ -21,7 +21,7 @@ public class LockCommand implements Callable<Integer> {
     @Parameters(index = "1", description = "Encryption password", defaultValue = "")
     private String password;
 
-    @Parameters(index = "2", description = "Step count (Argon2 iterations, min 1)", defaultValue = "3")
+    @Parameters(index = "2", description = "Step count (Argon2 iterations, min 1)", defaultValue = "0")
     private int stepCount;
 
     @Override
@@ -30,6 +30,12 @@ public class LockCommand implements Callable<Integer> {
             // if password not provided as argument, prompt securely
             if (password == null || password.isBlank())
                 password = ConsoleUtil.promptPassword("Enter password: ");
+
+            // if step count not provided as argument, prompt separately
+            if (stepCount < 1) {
+                String input = ConsoleUtil.promptInput("Enter step count (recommended 3-5): ");
+                stepCount = Integer.parseInt(input.trim());
+            }
 
             Path inputPath = Paths.get(System.getProperty("user.dir"), fileName);
             FileUtil.validateExists(inputPath);

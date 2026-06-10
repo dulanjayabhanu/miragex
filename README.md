@@ -168,6 +168,21 @@ cd D:\Development\Accounts
 miragex lock secrets.txt mypassword 5
 ```
 
+If `password` and `step` count are not provided as arguments, MirageX will prompt
+you to enter them interactively. The `password` input is **hidden** for security.
+
+Example with arguments:
+```bash
+miragex lock secrets.txt mypassword 3
+```
+
+Example with interactive prompt:
+```bash
+miragex lock secrets.txt
+# Enter password:
+# Enter step count (recommended 3-5):
+```
+
 This will create `secrets.mgx` in the same directory. The original file is not deleted.
 
 ### Decrypt to terminal
@@ -182,6 +197,15 @@ Example:
 cd D:\Development\Accounts
 
 miragex read secrets.mgx mypassword 5
+```
+
+Example with interactive prompt:
+```bash
+cd D:\Development\Accounts
+
+miragex read secrets.mgx
+# Enter password:
+# Enter step count (recommended 3-5):
 ```
 
 The decrypted content is printed directly to the terminal. No file is written.
@@ -212,6 +236,15 @@ Example:
 cd D:\Development\Accounts
 
 miragex unlock secrets.mgx mypassword 5
+```
+
+Example with interactive prompt:
+```bash
+cd D:\Development\Accounts
+
+miragex unlock secrets.mgx
+# Enter password:
+# Enter step count (recommended 3-5):
 ```
 
 This will recreate the original `secrets.txt` file in the same directory.

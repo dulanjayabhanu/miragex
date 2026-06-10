@@ -92,8 +92,8 @@ the tool from source before using it. Nothing is hidden.
 Download the latest release ZIP for your operating system from the
 [Releases](https://github.com/dulanjayabhanu/miragex/releases) page.
 
-- miragex-1.0.0-linux-mac.zip (Linux and macOS)
-- miragex-1.0.0-windows.zip (Windows)
+- miragex-1.1.0-linux-mac.zip (Linux and macOS)
+- miragex-1.1.0-windows.zip (Windows)
 
 Extract the ZIP. Both files inside must remain in the same folder.
 

@@ -103,20 +103,40 @@ This allows you to run `miragex` from any directory on your machine.
 
 Linux and macOS:
 
+First make the wrapper script executable. This is a one time step:
+
 ```bash
-export PATH=$PATH:/path/to/miragex/folder
+chmod +x /path/to/miragex/folder/miragex
+
+# Example:
+# chmod +x /Users/john/tools/MirageX/miragex
 ```
 
-Add that line to `~/.bashrc` or `~/.zshrc` to make it permanent, then run:
+Then add to PATH permanently by adding this line to `~/.bashrc` (Linux) or `~/.zshrc` (macOS):
+
+```bash
+export PATH=$PATH:/path/to/miragex/folder
+
+# Example:
+# export PATH=$PATH:/Users/john/tools/miragex
+```
+
+Apply the changes:
 
 ```bash
 source ~/.bashrc
+
+# or for macOS
+source ~/.zshrc
 ```
 
 Windows PowerShell:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\path\to\miragex", "User")
+
+# Example:
+# [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Tools\miragex", "User")
 ```
 
 Restart PowerShell after running this command.
@@ -144,6 +164,7 @@ Example:
 
 ```bash
 cd D:\Development\Accounts
+
 miragex lock secrets.txt mypassword 5
 ```
 
@@ -159,6 +180,7 @@ Example:
 
 ```bash
 cd D:\Development\Accounts
+
 miragex read secrets.mgx mypassword 5
 ```
 
@@ -174,6 +196,7 @@ Example:
 
 ```bash
 cd D:\Development\Accounts
+
 miragex unlock secrets.mgx mypassword 5
 ```
 
@@ -231,7 +254,9 @@ by the AES-256-GCM ciphertext.
 
 ```bash
 git clone https://github.com/dulanjayabhanu/miragex.git
+
 cd miragex
+
 mvn package
 ```
 

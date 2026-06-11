@@ -6,8 +6,31 @@
 
     <groupId>lk.dulanjaya</groupId>
     <artifactId>miragex</artifactId>
-    <version>1.0</version>
+    <version>1.1.1</version>
+    <packaging>jar</packaging>
     <name>miragex</name>
+    <description>A secure, offline, console-based file encryption tool built with Java 21 and Picocli.</description>
+    <url>https://github.com/dulanjayabhanu/miragex</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Dulanjaya Bhanu</name>
+            <url>https://github.com/dulanjayabhanu</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/dulanjayabhanu/miragex.git</connection>
+        <developerConnection>scm:git:ssh://github.com/dulanjayabhanu/miragex.git</developerConnection>
+        <url>https://github.com/dulanjayabhanu/miragex</url>
+    </scm>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

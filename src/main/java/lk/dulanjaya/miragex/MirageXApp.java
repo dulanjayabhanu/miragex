@@ -8,7 +8,7 @@ import picocli.CommandLine.Command;
 
 @Command(
         name = "miragex",
-        version = "MirageX 1.0.0",
+        version = "MirageX 1.1.1",
         mixinStandardHelpOptions = true,
         subcommands = {
                 LockCommand.class,
@@ -34,7 +34,7 @@ import picocli.CommandLine.Command;
                 "  miragex read   <file> <password> <steps>  Decrypt to terminal",
                 "  miragex unlock <file> <password> <steps>  Decrypt to new file",
                 "",
-                "@|bold Developer:|@  Dulanjaya | github.com/dulanjaya",
+                "@|bold Developer:|@  Dulanjaya | github.com/dulanjayabhanu",
                 "@|bold License:|@    MIT",
                 ""
         }

@@ -92,8 +92,8 @@ the tool from source before using it. Nothing is hidden.
 Download the latest release ZIP for your operating system from the
 [Releases](https://github.com/dulanjayabhanu/miragex/releases) page.
 
-- miragex-1.1.1-linux-mac.zip (Linux and macOS)
-- miragex-1.1.1-windows.zip (Windows)
+- miragex-<latest-version>-linux-mac.zip (Linux and macOS)
+- miragex-<latest-version>-windows.zip (Windows)
 
 Extract the ZIP. Both files inside must remain in the same folder.
 
@@ -323,7 +323,7 @@ mvn test
 |---|---|---|
 | Java | 21 | Runtime |
 | Picocli | 4.7.6 | CLI framework |
-| Bouncy Castle | 1.78.1 | Cryptography provider |
+| Bouncy Castle | 1.86 | Cryptography provider |
 | JUnit 5 | 5.10.2 | Unit testing |
 | Maven | 3.x | Build tool |
 

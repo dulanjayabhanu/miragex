@@ -8,7 +8,7 @@ import picocli.CommandLine.Command;
 
 @Command(
         name = "miragex",
-        version = "MirageX 1.1.1",
+        version = "MirageX 1.1.2",
         mixinStandardHelpOptions = true,
         subcommands = {
                 LockCommand.class,
